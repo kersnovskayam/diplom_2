@@ -2,7 +2,7 @@ from methods.orders_methods import OrderMethods
 from methods.other_methods import OtherMethods
 
 from utils.allure_decorator import allure_step_decorator
-from utils.constants import ORDERS_CREATE_ENDPOINT
+from constants import ORDERS_CREATE_ENDPOINT
 from utils.response_codes import ResponseCodes
 from utils.response_assertion import ResponseJson
 from utils.test_data import TestData
@@ -21,7 +21,8 @@ class TestRestApiGetOrders:
 
     @allure_step_decorator("Тест получения списка заказов неавторизованного  пользователя")
     def test_get_orders_authorised_user(self):
-        response = OrderMethods.get_orders(ORDERS_CREATE_ENDPOINT, TestData.NONE_TOKEN)
+        response = OrderMethods.get_orders(ORDERS_CREATE_ENDPOINT, TestData.NONE_VALUE)
 
         assert response.status_code == ResponseCodes.UNAUTHORIZED.value
         assert all(key in response.json() for key in ResponseJson.UNAUTHORIZED_DATA)
+

@@ -2,7 +2,7 @@ import random
 import string
 
 from methods.register_methods import RegisterMethods
-from utils.constants import AUTH_REGISTER_ENDPOINT
+from constants import AUTH_REGISTER_ENDPOINT
 from utils.test_data import TestData
 
 

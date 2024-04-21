@@ -9,3 +9,4 @@ class ResponseJson:
     ORDER_WRONG_INGRIDIENTS = {'success': False, 'message': 'One or more ids provided are incorrect'}
     EMPTY_INGRIDIENTS = {'success': False, 'message': 'Ingredient ids must be provided'}
     SUCCESS_GET_ORDER = ['success', 'orders']
+

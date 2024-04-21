@@ -5,3 +5,4 @@ class ResponseCodes(Enum):
     FORBIDDEN = 403
     BAD_REQUEST = 400
     UNAUTHORIZED = 401
+

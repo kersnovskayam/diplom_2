@@ -17,3 +17,4 @@ class RegisterMethods:
         response = BaseApp.send_post_request(api_connection, headers, data)
 
         return response
+
