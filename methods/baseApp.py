@@ -38,3 +38,4 @@ class BaseApp:
         except requests.exceptions.RequestException as e:
             logging.info(f"Ошибка при отправлении запроса PATCH по {url}: {e}")
             return None
+

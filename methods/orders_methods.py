@@ -2,7 +2,7 @@ from methods.baseApp import BaseApp
 from utils.allure_decorator import allure_step_decorator
 
 
-class OrderMethods:
+class OrderMethods(BaseApp):
 
     @staticmethod
     @allure_step_decorator("Метод по созданию заказа")
@@ -28,4 +28,3 @@ class OrderMethods:
         response = BaseApp.send_get_request(api_connection, headers=headers)
 
         return response
-

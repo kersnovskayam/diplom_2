@@ -2,7 +2,7 @@ from methods.baseApp import BaseApp
 from utils.allure_decorator import allure_step_decorator
 
 
-class RegisterMethods:
+class RegisterMethods(BaseApp):
 
     @staticmethod
     @allure_step_decorator("Метод по созданию пользователя")

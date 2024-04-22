@@ -2,7 +2,7 @@ from methods.baseApp import BaseApp
 from utils.allure_decorator import allure_step_decorator
 
 
-class LoginMethods:
+class LoginMethods(BaseApp):
 
     @staticmethod
     @allure_step_decorator("Метод по авторизации пользователя")
