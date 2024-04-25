@@ -7,6 +7,9 @@ from utils.test_data import TestData
 
 
 class OtherMethods:
+
+        register_methods = RegisterMethods()
+
         @staticmethod
         def generate_random_string(length):
             letters = string.ascii_lowercase
@@ -23,7 +26,7 @@ class OtherMethods:
 
         def create_user_and_take_token(self):
             email, password, name = self.generation_data()
-            response = RegisterMethods.create_user(AUTH_REGISTER_ENDPOINT, TestData.NONE_VALUE, email, password, name)
+            response = self.register_methods.create_user(AUTH_REGISTER_ENDPOINT, TestData.NONE_VALUE, email, password, name)
             token = response.json()['accessToken']
 
             return token
